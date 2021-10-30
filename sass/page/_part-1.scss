@@ -1,0 +1,121 @@
+
+.part-1 {
+  color: #ffff;
+  margin-bottom: 6rem;
+  &-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    &-main {
+      font-size: 16px;
+      font-weight: 100;
+      text-transform: capitalize;
+    }
+  }
+  &-heading1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    &-sub1{
+      @include respond (phone){
+        visibility: hidden;
+        width: 0;
+      }
+    }
+    &-sub2 {
+
+      &-mob{
+        @include respond (phone){
+
+          @include respond (laptop){
+
+          }
+        }
+        
+      }
+    }
+    &-main {
+
+      
+      display: inline-block;
+      text-transform: uppercase;
+      border-bottom: 3px solid #ffff;
+    }
+  }
+  &-flims {
+    display: inline-block;
+    margin-left: 112px;
+    text-align: center;
+    @include respond(phone) {
+      margin-left: 139px;
+      @include respond(laptop) {
+        margin-left: 112px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      margin-bottom: 25px;
+      transition: all 0.3s;
+      @include respond(phone) {
+        display: inline-block;
+        width: 100%;
+      }
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+    &-btn {
+      text-decoration: none;
+      border-radius: 50rem;
+      transition: all 0.1s;
+      @include respond(phone) {
+        font-size: 35px;
+        padding: 10px 20px;
+        @include respond(laptop) {
+          padding: 5px 10px;
+          font-size: 15px;
+        }
+      }
+      &:active {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+  &-flims1 {
+    @include respond(phone) {
+      display: inline-block;
+      margin-left: 32px;
+      text-align: center;
+      @include respond(laptop){
+        margin-left: 112px;
+      }
+    }
+
+    &-img1 {
+      width: 100%;
+      margin-bottom: 25px;
+      transition: all 0.3s;
+      @include respond(phone) {
+        width: 130%;
+        margin-bottom: -50px;
+        @include respond(laptop) {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  &-end {
+    width: 100%;
+    margin-top: 6rem;
+    text-align: center;
+    &-text {
+      display: inline-block;
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+  }
+}

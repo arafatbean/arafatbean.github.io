@@ -1,0 +1,47 @@
+.footer {
+  background-color: #171717;
+  height: 100px;
+  padding: 40px 110px;
+  @include respond(phone) {
+      height: 140px;
+      padding: 40px 45px;
+      @include respond (laptop){
+        height: 100px;
+        padding: 40px 110px;
+      }  
+  }
+  &-so {
+    float: left;
+  }
+  &-cpy {
+      text-align: right;
+    &-text {
+      display: inline-block;
+      font-weight: 300;
+      color: #ffff;
+      @include respond(phone) {
+        font-size: 30px; 
+        @include respond (laptop){
+          font-size: 15px;
+        }
+    }
+    }
+  }
+  &-face {
+    font-weight: 300;
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffff;
+    @include respond(phone) {
+      font-size: 50px;
+      @include respond(laptop){
+        font-size: 30px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

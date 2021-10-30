@@ -1,0 +1,46 @@
+.row{
+    max-width: 200rem;
+    &:not(:last-child){
+        margin-bottom: 2rem
+    }
+    @include clearfix;
+     
+    [class^="col-"]{
+        float: left;
+        @include respond(phone) {
+            float: none;
+            @include respond(laptop){
+                float: left;
+            }
+          }
+        &:not(:last-child){
+            margin-right: 2rem;
+            @include respond(phone) {
+                margin-right: 0;
+                @include respond(laptop){
+                    margin-right: 2rem;
+                }
+              }
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - 1 * #{6rem})/2);
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2*#{6rem } )/3);
+        @include respond (phone){
+            width: 700px;
+            &:not(:last-child){
+                margin-bottom: 30px;
+              }
+              @include respond(laptop){
+                width: calc((100% - 2*#{6rem } )/3);
+                &:not(:last-child){
+                    margin-bottom: 0px;
+                  }
+              }
+        }
+    }
+}

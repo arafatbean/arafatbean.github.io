@@ -1,0 +1,114 @@
+
+.header {
+  color: #ffff;
+
+  &-text {
+    @include respond(phone) {
+      margin: 0 23px;
+      @include respond(laptop){
+        margin: 0;
+      }
+    }
+  }
+
+  text-align: center;
+  margin-bottom: 5rem;
+  @include respond(phone) {
+    text-align: center;
+  }
+  &-heading {
+    font-family: "James";
+    padding: 0rem 4rem;
+    display: inline-block;
+    font-size: 10rem;
+    font-weight: 100;
+    border: 6px solid #ffff;
+    @include respond(phone) {
+      padding: 0rem 0rem;
+      @include respond(laptop){
+        padding: 0rem 0rem;
+      }
+    }
+  }
+  &-img {
+    &-box1 {
+      margin: 0 5rem;
+      margin-top: 4.5rem;
+      &-content {
+        border-radius: 50rem;
+        width: 20%;
+        @include respond(phone) {
+          width: 40%;
+          @include respond(laptop){
+            width: 20%;
+          }
+        }
+      }
+      &-text1 {
+        margin-bottom: 1px;
+      }
+      &-text2 {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-text {
+      font-family: inherit;
+      text-transform: capitalize;
+    }
+    &-box {
+      margin-top: 2rem;
+      text-transform: uppercase;
+      text-align: left;
+
+      &-main {
+        display: block;
+      }
+      &-sub {
+        text-align: center;
+        font-weight: 300;
+        @include respond(phone) {
+          font-size: 30px;  
+          @include respond(laptop){
+            font-size: 15px;
+          } 
+        }
+        &-1 {
+          border: 2px solid #ffff;
+          display: inline-block;
+          margin-top: 20px;
+          padding: 2px 4px;
+          margin-right: 10px;
+          @include respond(phone) {
+            padding: 3px 4px;
+          }
+        }
+
+        &-2 {
+          border: 2px solid #ffff;
+          display: inline-block;
+          margin-top: 20px;
+          padding: 2px 4px;
+          word-spacing: 10px;
+          margin-right: 10px;
+        }
+
+        &-3 {
+          border: 2px solid #ffff;
+          display: inline-block;
+          margin-top: 20px;
+          padding: 2px 4px;
+          margin-right: 10px;
+        }
+        &-4 {
+          display: block;
+          border: 2px solid #ffff;
+          display: inline-block;
+          margin-top: 20px;
+          padding: 2px 4px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
