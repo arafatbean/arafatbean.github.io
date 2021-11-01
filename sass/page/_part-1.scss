@@ -1,43 +1,70 @@
-
 .part-1 {
   color: #ffff;
   margin-bottom: 6rem;
   &-heading {
     text-align: center;
     margin-bottom: 60px;
+    @include respond(phone) {
+      margin-bottom: 100px;
+      @include respond(laptop){
+        margin-bottom: 50px;
+      }
+    }
     &-main {
       font-size: 16px;
       font-weight: 100;
       text-transform: capitalize;
+      @include respond (tablet){
+        font-size: 30px;
+        @include respond (laptop){
+          font-size: 20px;
+        }
+      }
     }
   }
   &-heading1 {
     text-align: center;
     margin-bottom: 2rem;
-    &-sub1{
-      @include respond (phone){
+    &-sub{
+      @include respond(phone){
+        margin: 0 40px;
+        margin-bottom: 50px;
+        @include respond (tablet){
+          font-size: 30px;
+          @include respond (laptop){
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    &-sub1 {
+      @include respond(phone) {
         visibility: hidden;
         width: 0;
       }
     }
     &-sub2 {
-
-      &-mob{
-        @include respond (phone){
-
-          @include respond (laptop){
-
+      @include respond (tablet){
+        font-size: 30px;
+        @include respond (laptop){
+          font-size: 20px;
+        }
+      }
+      &-mob {
+        @include respond(phone) {
+          @include respond(laptop) {
           }
         }
-        
       }
     }
     &-main {
-
-      
       display: inline-block;
       text-transform: uppercase;
       border-bottom: 3px solid #ffff;
+      @include respond(phone){
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+      }
     }
   }
   &-flims {
@@ -58,26 +85,24 @@
       @include respond(phone) {
         display: inline-block;
         width: 100%;
+        @include respond (laptop){
+          margin-bottom: 10px;
+        }
       }
       &:hover {
         transform: translateY(-3px);
       }
     }
     &-btn {
-      text-decoration: none;
-      border-radius: 50rem;
-      transition: all 0.1s;
-      @include respond(phone) {
-        font-size: 35px;
-        padding: 10px 20px;
-        @include respond(laptop) {
-          padding: 5px 10px;
-          font-size: 15px;
-        }
+      @include respond(phone){
       }
-      &:active {
-        background-color: #000;
-        color: #fff;
+      &-img {
+        @include respond(phone){
+          width: 300px;
+          @include respond(laptop){
+            width: 150px;
+          }
+        }
       }
     }
   }
@@ -86,7 +111,7 @@
       display: inline-block;
       margin-left: 32px;
       text-align: center;
-      @include respond(laptop){
+      @include respond(laptop) {
         margin-left: 112px;
       }
     }

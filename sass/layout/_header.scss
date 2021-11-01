@@ -1,12 +1,16 @@
-
 .header {
   color: #ffff;
 
   &-text {
     @include respond(phone) {
-      margin: 0 23px;
-      @include respond(laptop){
-        margin: 0;
+      margin: 0 100px;
+      margin-bottom: 100px;
+      @include respond(tablet) {
+        font-size: 30px;
+        @include respond(laptop) {
+          font-size: 20px;
+          margin: 0;
+        }
       }
     }
   }
@@ -25,7 +29,7 @@
     border: 6px solid #ffff;
     @include respond(phone) {
       padding: 0rem 0rem;
-      @include respond(laptop){
+      @include respond(laptop) {
         padding: 0rem 0rem;
       }
     }
@@ -34,21 +38,43 @@
     &-box1 {
       margin: 0 5rem;
       margin-top: 4.5rem;
+      @include respond(phone){
+        margin-top: 4.5rem;
+        margin-bottom: 100px;
+        @include respond (laptop){
+          margin-bottom: 50px;
+        }
+      }
       &-content {
         border-radius: 50rem;
         width: 20%;
         @include respond(phone) {
           width: 40%;
-          @include respond(laptop){
+          @include respond(laptop) {
             width: 20%;
           }
         }
       }
       &-text1 {
         margin-bottom: 1px;
+        @include respond (phone){
+          margin-bottom: 5px;
+          @include respond (tablet){
+            font-size: 30px;
+            @include respond(laptop){
+              font-size: 20px;
+            }
+          }
+        }
       }
       &-text2 {
         margin-bottom: 30px;
+        @include respond (tablet){
+          font-size: 20px;
+          @include respond (laptop){
+            font-size: 16px;
+          }
+        }
       }
     }
 
@@ -59,19 +85,30 @@
     &-box {
       margin-top: 2rem;
       text-transform: uppercase;
-      text-align: left;
+      @include respond(phone){
+        margin-bottom: 100px;
+        @include respond(phone){
+          margin-bottom: 50px;
+        }
+      }
 
       &-main {
         display: block;
+        @include respond (tablet){
+          
+        }
       }
       &-sub {
         text-align: center;
         font-weight: 300;
         @include respond(phone) {
-          font-size: 30px;  
-          @include respond(laptop){
-            font-size: 15px;
-          } 
+          font-size: 30px;
+          @include respond(tablet) {
+            font-size: 25px;
+            @include respond(laptop) {
+              font-size: 15px;
+            }
+          }
         }
         &-1 {
           border: 2px solid #ffff;
